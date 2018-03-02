@@ -76,7 +76,8 @@ out all the steps to create our multi-tiered architecture,
 and initialising all the containers with their required data
 and configuration.
 ```bash
-docker-compose up -d
+docker-compose pull
+docker-compose up --no-build -d
 ```
 
 ## check/validate the stack
