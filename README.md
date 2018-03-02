@@ -58,7 +58,7 @@ The stack was developed and tested in the following environment
 First steps will be to pull this repo and change into the repositories
 root directory with the following commands:
 ```bash
-git clone https://github.com/castlemilk/demo1
+git clone https://github.com/castlemilk/demo1.git
 cd demo1
 ```
 
@@ -78,6 +78,20 @@ and configuration.
 ```bash
 docker-compose pull
 docker-compose up --no-build -d
+```
+
+##  Run on different port
+If your local environment does'nt support running on lower port ranges
+then we can get the stack to run on a different higher port. This can be achieved by setting the docker-compose.yml file as follows:
+```yaml
+services:
+  ...
+  proxy:
+    ...
+    ports:
+      - <insert-higher-port-here>:80
+    
+  ...
 ```
 
 ## check/validate the stack
