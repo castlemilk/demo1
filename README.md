@@ -16,7 +16,7 @@ deployment can be seen below
 
 ## Components
 The stack is comprised of the following components, which 
-have been chosen for their familiarity and easey/quick stand
+have been chosen for their familiarity and easy/quick stand
 up time.
 
 ### NGINX
@@ -34,8 +34,11 @@ is read/written from the Django application.
 
 
 # Landing Page
-
-<insert-landing-page-screenshot-here>
+The basic application/landing page presents a button 
+which is clickable. On each click it will make a 
+POST request to the webapp, the webapp will then increment
+the currently stored value in the database.
+On each click a nice animation is drawn on the canvas.
 
 
 
