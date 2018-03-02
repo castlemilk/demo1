@@ -9,7 +9,9 @@ a backend database, in this case PostgreSQL.
 The overall architecture that is contained within the docker
 deployment can be seen below
 
-<insert-image-reference-here>
+<p align="center">
+<img src="docs/images/architecture.png" width="800" vertical-align="text-top"/>
+</p>
 
 
 ## Components
@@ -18,10 +20,17 @@ have been chosen for their familiarity and easey/quick stand
 up time.
 
 ### NGINX
+Acts as a reverse proxy, this is the only "publicly" facing
+container.
 
 ### Django
+This is hosting a basic web-app which is serving
+a HTML template which is rendering data fetched
+from the database container
 
 ### PostgreSQL
+basic postgres container which is contains data that
+is read/written from the Django application.
 
 
 # Landing Page
@@ -85,6 +94,16 @@ should be possible to browse to:
 [localhost](http://localhost)
 
 
-# Example of what you should see
+# Example of UI
 
-<insert-example-of-what-you-should-see>
+## Initially
+<p align="center">
+<img src="docs/images/ui-view1.png" width="800" vertical-align="text-top"/>
+</p>
+
+## After a few clicks
+<p align="center">
+<img src="docs/images/ui-view2.png" width="800" vertical-align="text-top"/>
+</p>
+
+

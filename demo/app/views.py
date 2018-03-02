@@ -34,7 +34,6 @@ def index(request):
     context = {
         'count': get_count(),
     }
-    print(request.POST)
-    if request.method == 'POST' and 'increment' in request.POST:
+    if request.method == 'POST':
         increment_count()
     return render(request, 'base_app.html', context)
