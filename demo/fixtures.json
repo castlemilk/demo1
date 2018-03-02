@@ -1,0 +1,9 @@
+[
+  {
+    "model": "app.randomcontent",
+    "fields": {
+      "count": 0
+    },
+    "pk": "1"
+  }
+]
