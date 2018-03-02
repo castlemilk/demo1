@@ -1,6 +1,18 @@
 version: '3'
 
 services:
+  proxy:
+    build:
+      context: .
+      dockerfile: ./docker/proxy/Dockerfile
+      args:
+        - SERVER_NAME=localhost
+        - WEBAPP_PORT=8000
+    image: castlemilk/demo1-proxy:v1
+    ports:
+      - 80:80
+    networks:
+      - frontend
   webapp:
     restart: always
     build:
@@ -12,8 +24,6 @@ services:
       - .:/django
     expose:
       - 8000
-    ports:
-      - 8080:8000
     networks:
       - frontend
       - backend
@@ -27,8 +37,6 @@ services:
       - ./docker/postgres/data:/var/lib/postgresql
     networks:
       - backend
-
-
 
 networks:
   frontend:
